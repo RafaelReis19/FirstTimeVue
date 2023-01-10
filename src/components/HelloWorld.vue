@@ -1,7 +1,83 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
+  </div>
+  <h2>Meu primeiro projeto Vue </h2>
+  <h2>Utilize o contador: {{ counter }}</h2>
+  <button id="soma" @click="somar">Somar :)</button>
+  <button id="sub" @click="subtrair">Subtrair</button>
+  <button id="add10" @click="verTime">Adicionar mais 10</button>
+  <h1 id="titulo">Rafael dRS VueJs/VueEx</h1>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data: () => ({
+    counter: 0
+  }),
+  methods: {
+    //" Pq na verdade, é pra SEMPREEE!!!! Eu te amo Luana, minha vida <3"
+    verTime: function() {
+      this.counter = this.counter + 10
+    },
+    subtrair: function() {
+      this.counter--
+    },
+    
+    somar: function() {
+      this.counter++
+    }
+  } ,
+  props: {
+    msg: String
+  } 
+
+}
+</script>
+
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+#titulo {
+  color: darkmagenta;
+}
+
+#add10 {
+  border-radius: 10%;
+  border-color: palegoldenrod;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  color: black;
+}
+
+#sub {
+  border-radius: 10%;
+  border-right-width: 5px;
+  border-left-width: 5px;
+  border-color: palegoldenrod;
+}
+
+#soma {
+  border-radius: 10%;
+  border-color: palegoldenrod;
+}
+
+</style>
+
+    <!--<p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
@@ -30,29 +106,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+<-- Add "scoped" attribute to limit CSS to this component only --
+
+-->
