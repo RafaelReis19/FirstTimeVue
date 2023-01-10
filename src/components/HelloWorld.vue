@@ -17,7 +17,7 @@ export default {
     counter: 0
   }),
   methods: {
-    //" Pq na verdade, é pra SEMPREEE!!!! Eu te amo Luana, minha vida <3"
+    //" Chamando os métodos dos buttons"
     verTime: function() {
       this.counter = this.counter + 10
     },
